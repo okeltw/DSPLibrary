@@ -1,8 +1,14 @@
 function [y,ny] = conv_m(x, nx, h, nh)
-nyb = nx(1) + nh(1);
-nye = nx(length(x) + nh(length(h);
+% Modified convolution routine for siganal processing
+% ----------------------------------------------------
+%   [y,ny] = conv_m(x,nx,h,hn)
+%   [y,ny] = convolution result
+%   [x,nx] = first signal
+%   [h,nh] = second signal
 
-ny = yb:nye;
+nyb = nx(1) + nh(1);
+nye = nx(length(x)) + nh(length(h));
+
+ny = nyb:nye;
 y = conv(h,x);
 end
-
