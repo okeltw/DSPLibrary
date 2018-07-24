@@ -1,7 +1,11 @@
-function [y,n] = sigshift(x,m,k)
-% Implements y(n) = x(n-k)
-% -------------------------
-% [y,n] = sigshift(x,m,k)
-n = m+k; y = x;
-end
+function [y,n] = sigshift(x,m,n0)
 
+% implements y(n) = x(n-n0)
+
+% -------------------------
+
+% [y,n] = sigshift(x,m,n0)
+
+%
+
+n = m+n0; y = x;
