@@ -6,9 +6,15 @@ function X = dtft(x,n,w)
 %   n = sample position vector
 %   w = frequency location vector
 
-M = length(w)-1;
-k = 0:M;
+x = x(:);
+x = x.';
+n = n(:);
+n = n.';
+w = w(:);
+w = w.';
 
-X = x * (exp(-j*pi/M)) .^ (n'*k); %#ok<IJCL>
+W=exp(-j*w.'*n);
+X=W*(x.');
+X = X.';
 
 end
